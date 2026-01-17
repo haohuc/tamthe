@@ -1,0 +1,63 @@
+:root {
+    --text-main: #111;
+    --text-muted: #555;
+    --max-width: 640px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 72px 24px;
+    font-family: "IBM Plex Serif", serif;
+    font-size: 17.5px; /* giảm nhẹ */
+    line-height: 1.85; /* tăng nhịp thở */
+    letter-spacing: 0.01em; /* giúp chữ Việt thoáng hơn */
+    word-spacing: 0.05em; /* rất quan trọng cho tiếng Việt */
+    color: var(--text-main);
+    background: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+main,
+article {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 36px;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-top: 56px;
+    margin-bottom: 18px;
+}
+
+p {
+    margin: 0 0 28px 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+a:hover {
+    border-bottom-color: #999;
+}
+
+nav {
+    margin-top: 48px;
+    font-size: 16px;
+    color: var(--text-muted);
+}

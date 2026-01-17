@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("writing")).filter(
+    (p) => p.data.status === "published",
+);
+---
+
+<BaseLayout title="Writing">
+    <main>
+        <h1>Writing</h1>
+
+        <ul>
+            {
+                posts.map((post) => (
+                    <li>
+                        <a href={`/writing/${post.slug}/`}>{post.data.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <nav>
+            <a href="/">← Philosophy</a>
+        </nav>
+    </main>
+</BaseLayout>
